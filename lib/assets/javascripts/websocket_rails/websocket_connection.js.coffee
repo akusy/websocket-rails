@@ -26,4 +26,5 @@ class WebSocketRails.WebSocketConnection extends WebSocketRails.AbstractConnecti
 
   send_event: (event) ->
     super
+    console.log event.serialize()
     @_conn.send event.serialize()
